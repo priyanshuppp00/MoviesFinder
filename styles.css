@@ -427,23 +427,23 @@ body.light-mode footer {
   align-items: flex-start;
   width: 100%;
   max-width: 500px;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Adjusted margin for better spacing */
 }
 
 #contactForm label {
-  margin: 10px 0 5px;
+  margin: 5px 0 5px; /* Adjusted label margin */
   font-size: 1rem;
   color: #ff0000;
 }
 
 #contactForm input, #contactForm textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Increased padding for input fields */
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: #d6cccc;
-  color: white;
+  background-color: rgb(234, 229, 229); /* Set input and textarea background to black */
+  color: rgb(9, 9, 9); /* Set text color to white */
 }
 
 #contactForm input:focus, #contactForm textarea:focus {
@@ -454,11 +454,13 @@ body.light-mode footer {
 #contactForm button {
   background-color: #ff0000;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px; /* Increased padding for button */
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s;
+  width: 100%; /* Make the button span full width */
+  max-width: 500px; /* Adjust max-width for consistency */
 }
 
 #contactForm button:hover {
@@ -469,6 +471,7 @@ body.light-mode footer {
   margin-top: 20px;
   color: #2ecc71;
 }
+
 
 /* About Page Styles */
 #about {
