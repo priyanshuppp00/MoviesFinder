@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieMania - About</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode"> <!-- Dark Mode by Default -->
+  <header>
+    <nav>
+      <div class="navbar-left">
+        <p class="pk-name">PK</p>
+        <h1>🎬 MoviesFinder</h1>
+      </div>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle">🌙 Light Mode</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="loading" class="loading-spinner">🔄 Loading...</div>
+
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search for a movie...">
+      <button onclick="searchMovie()">Search</button>
+    </section>
+
+    <section class="movie-results" id="movieResults"></section>
+    <button id="nextButton" style="display: none;" onclick="nextPage()">Next</button>
+
+    <section class="watchlist">
+      <h2>📌 Watchlist</h2>
+      <div id="watchlistContainer"></div>
+    </section>
+
+    <section id="about">
+      <h2>About MoviesFinder</h2>
+      <p>MoviesFinder is your ultimate destination for discovering movies. Whether you're looking for the latest
+        blockbusters or classic films, MoviesFinder has got you covered.</p>
+      <p>Our mission is to provide movie enthusiasts with a comprehensive database of films, complete with detailed
+        information, ratings, and reviews. We strive to make it easy for you to find the perfect movie for any occasion.
+      </p>
+      <p>With MoviesFinder, you can:</p>
+      <ul>
+        <li>Search for movies by title, genre, or year</li>
+        <li>View detailed information about each movie, including cast, director, plot summary, and ratings</li>
+        <li>Create and manage your own watchlist</li>
+        <li>Stay updated with the latest trending movies</li>
+      </ul>
+      <p>Join our community of movie lovers and start exploring the world of cinema with MoviesFinder!</p>
+      <h3>Our Vision</h3>
+      <p>At MoviesFinder, we envision a world where everyone has access to the best movies and can easily discover new
+        favorites. We believe in the power of cinema to inspire, entertain, and bring people together.</p>
+      <h3>Our Team</h3>
+      <p>Our team is made up of passionate movie enthusiasts who are dedicated to providing you with the best movie
+        discovery experience. We work tirelessly to keep our database up-to-date and ensure that you have access to the
+        latest and greatest films.</p>
+      <h3>Contact Us</h3>
+      <p>If you have any questions, feedback, or suggestions, please don't hesitate to reach out to us. We'd love to
+        hear from you!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 MovieMania. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

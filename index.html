@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoviesFinder - Movie Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+
+  <nav>
+    <div class="navbar-left">
+      <p class="pk-name">PK</p>
+      <p>🎬 MovieFinder</p>
+    </div>
+    <ul class="navbar">
+
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="theme-toggle">🌙 Light Mode</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search for a movie...">
+      <button onclick="searchMovie()">Search</button>
+    </section>
+    <div id="movieDetails" style="display: none;"></div>
+    <div id="loading" class="loading-spinner" style="display: none;">🔄 Searching...</div>
+    <section class="movie-results" id="movieResults"></section>
+    <button id="nextButton" style="display: none;" onclick="nextPage()">Next</button>
+
+    <section class="trending">
+      <h2>🔥 Trending Movies</h2>
+      <div class="trending-movies" id="trendingMovies"></div>
+    </section>
+
+    <section class="watchlist">
+      <h2>📌 Watchlist</h2>
+      <div id="watchlistContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 🎬 MoviesFinder. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+/* Base styles */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s;
+}
+
+/* Navbar Styles */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.pk-name {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #ff0000;
+}
+
+.navbar li {
+  float: left;
+  margin-left: 20px;
+}
+
+.navbar li a {
+  display: block;
+  color: #edecec;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.navbar li a:hover {
+  font-size: 21px;
+  color: #ff0000;
+}
+
+.navbar li a.active {
+  font-size: 20px;
+  text-decoration: underline;
+ 
+}
+
+body.dark-mode .navbar li a {
+  color: #ddd;
+}
+
+body.dark-mode .navbar li a:hover {
+ 
+  color: #ff0000;
+}
+
+body.dark-mode .navbar li a.active {
+ 
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px; /* Adjust the offset value as needed */
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+#theme-toggle {
+  background: #ff0000;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+  background: darkred;
+}
+
+ 
+button {
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #160cae;
+  margin-top: 20px;
+}
+
+/* No Movies Found Box */
+.no-movies-found {
+  background-color: #ffcccb;
+  color: #000;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s, top 0.3s;
+  z-index: 1000;
+}
+
+.notification.show {
+  opacity: 1;
+  top: 40px;
+}
+
+/* Green Notification for Adding */
+.notification.success {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Warm Notification for Removing */
+.notification.warning {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* "Go to Watchlist" Button */
+
+.go-to-watchlist-btn {
+  background-color: #a80916; /* Primary Blue */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-watchlist-btn:hover {
+  background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark-mode button {
+  background-color: #ff0000;
+}
+
+body.dark-mode button:hover {
+  background-color: darkred;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .navbar li a {
+  color: #000000;
+}
+
+body.light-mode .movie-details-card {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+body.light-mode .movie-details-card button {
+  background-color: #ff0000;
+}
+
+body.light-mode .movie-details-card button:hover {
+  background-color: darkred;
+}
+
+body.light-mode .no-movies-found {
+  background-color: #ffcccb;
+  color: #000000;
+}
+
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode #contactForm {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+body.light-mode #contactForm input, body.light-mode #contactForm textarea {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode #contactForm button {
+  background-color: #ff0000;
+}
+
+body.light-mode #contactForm button:hover {
+  background-color: darkred;
+}
+
+body.light-mode #formSuccess {
+  color: #2ecc71;
+}
+
+body.light-mode #about {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+body.light-mode #about h2, body.light-mode #about h3 {
+  color: #ff0000;
+}
+
+body.light-mode #socialMedia h2 {
+  color: #ff0000;
+}
+
+body.light-mode #socialMedia ul li a {
+  color: #007bff;
+}
+
+body.light-mode #socialMedia ul li a:hover {
+  color: #0056b3;
+}
+
+/* Movie Cards */
+.movie-card {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  height: 450px; /* Ensure equal height */
+  box-sizing: border-box;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 65%; /* Adjust image height */
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  height: 40px; /* Adjust title height */
+  overflow: hidden;
+}
+
+.movie-card button {
+  background-color:   #ff0000;
+  margin: 5px;
+  width: 70%;
+}
+
+.movie-card button:hover {
+  background-color: darkred;
+}
+
+.search-section {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-section input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.search-section button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+  width: 10%;
+}
+/* Movie Details Card */
+.movie-details-card {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-details-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details-card img {
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.movie-details-card .details {
+  width: 60%;
+}
+
+.movie-details-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.movie-details-card p {
+  margin: 5px 0;
+}
+
+.movie-details-card button {
+  background-color: #cf7878;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.movie-details-card button:hover {
+  background-color: darkred;
+}
+
+/* Trending and Watchlist Sections */
+.trending, .watchlist {
+  margin-top: 30px;
+}
+
+.trending h2, .watchlist h2 {
+  text-align: center;
+  margin: 50px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #121212;
+  position: absolute; /* Changed from absolute to fixed */
+  padding: 20px;
+  width: 100%;
+}
+
+
+
+body.light-mode footer {
+  background-color:  #ffffff;
+  color: #000000;
+}
+
+/* Contact Form Styles */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contactForm .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+#contactForm label {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #ff0000;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #d6cccc;
+  color: white;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+#contactForm button {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#contactForm button:hover {
+  background-color: darkred;
+}
+
+#formSuccess {
+  margin-top: 20px;
+  color: #2ecc71;
+}
+
+/* About Page Styles */
+#about {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about h2, #about h3 {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+#about p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+#about ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+#about ul li {
+  margin-bottom: 10px;
+}
+
+/* Social Media Styles */
+#socialMedia {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#socialMedia h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+#socialMedia ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#socialMedia ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+#socialMedia ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+#socialMedia ul li a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+  .navbar li a{
+    font-size: 14px;
+  }
+  .navbar li a.active {
+    font-size: 15px;
+    text-decoration: underline;
+   
+  }
+  .navbar li a.hover {
+    font-size: 15px;
+    text-decoration: underline;
+   
+  }
+
+  .movie-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .search-section input {
+    width: 50%;
+  }
+  .search-section button{
+    width: 20%;
+    font-size: 14px;
+  }
+  
+  .movie-details-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-details-card img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .movie-details-card .details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar li a {
+    font-size: 12px;
+  }
+  .search-section button{
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .movie-details-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .movie-details-card p {
+    font-size: 0.9rem;
+  }
+
+  .movie-details-card button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+
