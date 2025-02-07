@@ -22,3 +22,18 @@ build/
 # Ignore specific files
 path/to/your/file.js
 path/to/another/file.css
+
+# Ignore all files
+*
+
+# Allow .gitignore file
+!.gitignore
+
+# Allow README.md file
+!README.md
+
+# Allow src directory
+!src/
+
+# Allow screenshots directory
+!screenshots/
