@@ -101,7 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
         movieDetails.style.display = "block";
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        
+        // Scroll to the movie details section
+        movieDetails.scrollIntoView({ behavior: "smooth" });
     }
 
     function closeMovieDetails() {
@@ -117,6 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
         displayWatchlist();
         hideLoadingSpinner();
         showNotification(`Added "${title}" to your watchlist`, "success");
+
+        // Scroll to the watchlist section
+        document.getElementById("watchlistContainer").scrollIntoView({ behavior: "smooth" });
     }
 
     function displayWatchlist() {
@@ -156,7 +161,6 @@ document.addEventListener("DOMContentLoaded", () => {
             goToWatchlistBtn.classList.add("go-to-watchlist-btn");
             goToWatchlistBtn.onclick = () => {
                 document.getElementById("watchlistContainer").scrollIntoView({ behavior: "smooth" });
-                window.scrollTo({ top: 0, behavior: "smooth" });
             };
             notification.appendChild(goToWatchlistBtn);
         }
