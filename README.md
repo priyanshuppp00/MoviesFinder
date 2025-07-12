@@ -1,7 +1,7 @@
 # MoviesFinder
 
 MoviesFinder is a web application that allows users to search for movies, view trending movies, and manage their watchlist. The application uses the OMDB API to fetch movie data.
-
+## Project-link: https://priyanshuppp00.github.io/MoviesFinder/
 ## Features
 
 - Search for movies by title
